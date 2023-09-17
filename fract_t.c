@@ -190,3 +190,15 @@ fract_t fract_sup(fract_t fst, fract_t scd)
     
     return fst;
 }
+
+float fract_to_float(fract_t fct)
+{
+    if(fct.den == 0) return 0.0f; 
+    return (float)fct.num / (float)fct.den;
+}
+
+double fract_to_double(fract_t fct)
+{
+    if(fct.den == 0) return 0.0; 
+    return (double)fct.num / (double)fct.den;
+}

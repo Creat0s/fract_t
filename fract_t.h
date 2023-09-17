@@ -32,4 +32,8 @@ fract_t fract_div(fract_t fst, fract_t scd);    // Division
 fract_t fract_add(fract_t fst, fract_t scd);    // Addition
 fract_t fract_sup(fract_t fst, fract_t scd);    // Subtraction
 
+// Convert
+float fract_to_float(fract_t fct);
+double fract_to_double(fract_t fct);
+
 #endif
