@@ -77,7 +77,11 @@ fract_t fract_mul(fract_t fst, fract_t scd)
         fst.num > MAX_FRACTION_MUL ||
         fst.den > MAX_FRACTION_MUL ||
         scd.num > MAX_FRACTION_MUL ||
-        scd.den > MAX_FRACTION_MUL
+        scd.den > MAX_FRACTION_MUL ||
+        fst.num < -MAX_FRACTION_MUL ||
+        fst.den < -MAX_FRACTION_MUL ||
+        scd.num < -MAX_FRACTION_MUL ||
+        scd.den < -MAX_FRACTION_MUL
     )
     {
         return (fract_t){ 0, 0 };
@@ -128,7 +132,11 @@ fract_t fract_add(fract_t fst, fract_t scd)
         fst.num > MAX_FRACTION_ADD ||
         fst.den > MAX_FRACTION_ADD ||
         scd.num > MAX_FRACTION_ADD ||
-        scd.den > MAX_FRACTION_ADD
+        scd.den > MAX_FRACTION_ADD ||
+        fst.num < -MAX_FRACTION_ADD ||
+        fst.den < -MAX_FRACTION_ADD ||
+        scd.num < -MAX_FRACTION_ADD ||
+        scd.den < -MAX_FRACTION_ADD
     )
     {
         return (fract_t){ 0, 0 };
